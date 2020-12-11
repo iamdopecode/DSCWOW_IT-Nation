@@ -1,308 +1,275 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital@0;1&display=swap');
 
-*{
-    margin: 0;
-    padding: 0;
-    text-decoration: none;
-    list-style: none;
-    box-sizing: border-box;
-    --grey: #9CA3AF;
-    --vdark-grey: #111827;
-    --dark-grey: #6B7280;
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  --grey: #9CA3AF;
+  --vdark-grey: #111827;
+  --dark-grey: #6B7280;
+
 }
 
-body
-{
-    font-family: 'Poppins', sans-serif;
+body {
+  font-family: 'Poppins', sans-serif;
 }
 
-nav
-{
-    background: var(--grey);
-    height: 80px;
+nav {
+  background: var(--grey);
+  height: 80px;
+  width: 100%;
+}
+
+label.logo {
+  color: white;
+  font-size: 30px;
+  line-height: 80px;
+  font-weight: bold;
+  padding: 0 25px
+}
+
+nav ul {
+  float: right;
+}
+
+nav ul li {
+  display: inline-block;
+  line-height: 80px;
+  margin: 0 4px;
+}
+
+nav ul li a {
+  color: white;
+  font-size: 17px;
+  padding: 7px 8px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+
+a.active,
+a:hover {
+  background: #374151;
+  transition: 0.5s;
+}
+
+.checkbtn {
+  font-size: 30px;
+  color: white;
+  float: right;
+  line-height: 80px;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+
+#check {
+  display: none;
+}
+
+@media (max-width: 952px) {
+  label.logo {
+    font-size: 30px;
+    padding-left: 50px;
+  }
+
+  nav ul li a {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 858px) {
+  .checkbtn {
+    display: block;
+  }
+
+  ul {
+    position: fixed;
     width: 100%;
+    height: 100vh;
+    background: var(--dark-grey);
+    left: -100%;
+    top: 80px;
+    text-align: center;
+    transition: all 0.5s;
+  }
+
+  nav ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+  }
+
+  nav ul li a {
+    font-size: 20px;
+  }
+
+  a:hover,
+  a.active {
+    background: none;
+    color: var(--vdark-grey);
+  }
+
+  #check:checked~ul {
+    left: 0;
+  }
 }
 
-label.logo
-{
-    color: white;
-    font-size: 30px;
-    line-height: 80px;
-    padding: 0 100px;
-    font-weight: bold;
+header {
+  background-image: url('../Images/example.jpeg');
+  height: 120vh;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  
 }
 
-nav ul
-{
-    float: right;
-    margin-right: 20px;
+
+/* -----------About-us------------*/
+
+.about-section{
+  background: url(../Images/pic.jpg) no-repeat left;
+  background-size: 50%;
+  background-color: #fdfdfd;
+  overflow: hidden;
+  padding: 110px 0;
 }
 
-nav ul li
-{
-    display: inline-block;
-    line-height: 80px;
-    margin: 0 5px;
+.inner-container{
+  width: 60%;
+  float: right;
+  background-color: #fdfdfd;
+  padding: 100px;
 }
 
-nav ul li a
-{
-    color: white;
-    font-size: 17px;
-    padding: 7px  8px;
-    border-radius: 3px;
-    text-transform: uppercase;
+.inner-container h1{
+  margin-bottom: 30px;
+  font-size: 30px;
+  font-weight: 900;
 }
 
-a.active,a:hover
-{
-    background: #374151;
-    transition: 0.5s;
+.text{
+  font-size: 15px;
+  color: #545454;
+  line-height: 30px;
+  text-align: justify;
+  margin-bottom: 40px;
+  text-rendering: optimizeLegibility;
+  font-weight: bold;
 }
 
-.checkbtn
-{
-    font-size: 30px;
-    color: white;
-    float: right;
-    line-height: 80px;
-    margin-right: 40px;
-    cursor: pointer;
-    display: none;
+@media screen and (max-width:1200px){
+  .inner-container{
+      padding: 80px;
+  }
 }
 
-#check
-{
-    display: none;
+@media screen and (max-width:1000px){
+  .about-section{
+      background-size: 100%;
+      padding: 100px 40px;
+  }
+  .inner-container{
+      width: 100%;
+  }
 }
 
-@media (max-width: 952px)
-{
-    label.logo
-    {
-        font-size: 30px;
-        padding-left: 50px;
-    }
-    nav ul li a
-    {
-        font-size: 16px;
-    }
-}
-@media (max-width: 858px)
-{
-    .checkbtn
-    {
-        display: block;
-    }
-    ul
-    {
-        position: fixed;
-        width: 100%;
-        height: 100vh;
-        background: var(--dark-grey);
-        left: -100%;
-        top: 80px;
-        text-align: center;
-        transition: all 0.5s;
-    }
-    nav ul li
-    {
-        display: block;
-        margin: 50px 0;
-        line-height: 30px;
-    }
-    nav ul li a
-    {
-        font-size: 20px;
-    }
-    a:hover,a.active
-    {
-        background: none;
-        color: var(--vdark-grey);
-    }
-    #check:checked ~ ul
-    {
-        left: 0;
-    }
+@media screen and (max-width:600px){
+  .about-section{
+      padding: 0;
+  }
+  .inner-container{
+      padding: 60px;
+  }
 }
 
-section
-{
-    background: url(/Images/example.jpeg) no-repeat;
-    background-size: cover;
-    height: calc(100vh - 80px);
-}
 
-@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+/*--------Our Team----------*/
+
+
+@import url('https://fonts.googleapis.com/css?family=Allura|Josefin+Sans');
+
 *{
   margin: 0;
   padding: 0;
-  color: #d9d9d9;
   box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
 }
-.content1{
-  position: relative;
-  margin: 130px auto;
+
+body{
+  background: #81c644;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.wrapper{
+  margin: 75px 0;
+  padding-top: 50px;
+  
+}
+
+.wrapper h1{
+  font-family: 'Allura', cursive;
+  font-size: 52px;
+  margin-bottom: 60px;
   text-align: center;
-  padding: 0 20px;
 }
-.content1 .text{
-  font-size: 2.5rem;
-  font-weight: 600;
-  color: #202020;
-}
-.content1 .p{
-  font-size: 2.1875rem;
-  font-weight: 600;
-  color: #202020;
-}
-footer{
-  position: fixed;
-  bottom: 0px;
-  width: 100%;
-  background: #111;
-}
-.main-content{
+
+.team{
   display: flex;
+  justify-content: center;
+  width: auto;
+  text-align: center;
+  flex-wrap: wrap;
 }
-.main-content .box{
-  flex-basis: 50%;
-  padding: 10px 20px;
-}
-.box h2{
-  font-size: 1.125rem;
-  font-weight: 600;
-  text-transform: uppercase;
-}
-.box .content{
-  margin: 20px 0 0 0;
+
+.team .team_member{
+  background: #fff;
+  margin: 5px;
+  margin-bottom: 50px;
+  width: 300px;
+  padding: 20px;
+  line-height: 20px;
+  color: #8e8b8b;  
   position: relative;
 }
-.box .content:before{
+
+.team .team_member h3{
+  color: #81c644;
+  font-size: 26px;
+  margin-top: 50px;
+  padding-bottom: 22px;
+}
+
+.team .team_member .team_img{
   position: absolute;
-  content: '';
-  top: -10px;
-  height: 2px;
-  width: 100%;
-  background: #1a1a1a;
-}
-.box .content:after{
-  position: absolute;
-  content: '';
-  height: 2px;
-  width: 15%;
-  background: #f12020;
-  top: -10px;
-}
-.left .content p{
-  text-align: justify;
-}
-.left .content .social{
-  margin: 20px 0 0 0;
-}
-.left .content .social a{
-  padding: 0 2px;
-}
-.left .content .social a span{
-  height: 40px;
-  width: 40px;
-  background: #1a1a1a;
-  line-height: 40px;
-  text-align: center;
-  font-size: 18px;
-  border-radius: 5px;
-  transition: 0.3s;
-}
-.left .content .social a span:hover{
-  background: #f12020;
-}
-.center .content .fas{
-  font-size: 1.4375rem;
-  background: #1a1a1a;
-  height: 45px;
-  width: 45px;
-  line-height: 45px;
-  text-align: center;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
-  transition: 0.3s;
-  cursor: pointer;
+  background: #fff;
 }
-.center .content .fas:hover{
-  background: #f12020;
-}
-.center .content .text{
-  font-size: 1.0625rem;
-  font-weight: 500;
-  padding-left: 10px;
-}
-.center .content .phone{
-  margin: 15px 0;
-}
-.right form .text{
-  font-size: 1.0625rem;
-  margin-bottom: 2px;
-  color: #656565;
-}
-.right form .msg{
-  margin-top: 10px;
-}
-.right form input, .right form .msgForm{
-  width: 100%;
-  font-size: 1.0625rem;
-  background: #151515;
-  padding-left: 10px;
-  border: 1px solid #222222;
-}
-.right form input:focus,
-.right form .msgForm:focus{
-  outline-color: #3498db;
-}
-.right form input{
-  height: 35px;
-}
-.right form .btn{
-  margin-top: 10px;
-}
-.right form .btn button{
-  height: 40px;
-  width: 100%;
-  border: none;
-  outline: none;
-  background: #f12020;
-  font-size: 1.0625rem;
-  font-weight: 500;
-  cursor: pointer;
-  transition: .3s;
-}
-.right form .btn button:hover{
-  background: #000;
-}
-.bottom center{
+
+.team .team_member .team_img img{
+  width: 100px;
+  height: 100px;
   padding: 5px;
-  font-size: 0.9375rem;
-  background: #151515;
 }
-.bottom center span{
-  color: #656565;
+
+
+/*----------Footer-------*/
+
+footer{
+  background: #111;
+  padding: 15px 23px;
+  color: #fff;
+  text-align: center;
 }
-.bottom center a{
-  color: #f12020;
+footer span a{
+  color: crimson;
   text-decoration: none;
 }
-.bottom center a:hover{
+footer span a:hover{
   text-decoration: underline;
-}
-@media screen and (max-width: 900px) {
-  footer{
-    position: relative;
-    bottom: 0px;
-  }
-  .main-content{
-    flex-wrap: wrap;
-    flex-direction: column;
-  }
-  .main-content .box{
-    margin: 5px 0;
-  }
 }
