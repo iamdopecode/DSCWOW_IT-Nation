@@ -125,6 +125,26 @@ header {
   
 }
 
+.hero-content {
+  margin-left: 560px;
+  margin-top: 200px;
+}
+
+.hero-content h1 {
+  color: #fdfdfd;
+  font-size: 55px;
+}
+
+.hero-content button {
+  padding: 7.5px 15px;
+  border-radius: 15px;
+  border: none;
+  background-color: var(--grey);
+  color: #fdfdfd;
+  margin-left: 60px;
+  cursor: pointer;
+}
+
 
 /* -----------About-us------------*/
 
@@ -252,9 +272,10 @@ body{
 }
 
 .team .team_member .team_img img{
-  width: 100px;
-  height: 100px;
-  padding: 5px;
+  width: 120px;
+  height: 110px;
+  padding: 0px;
+  border-radius: 19px;
 }
 
 
